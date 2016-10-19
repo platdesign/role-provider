@@ -117,4 +117,3 @@ Validates given `permissions`-object and returns promise which resolves if all `
 
 [@platdesign](https://twitter.com/platdesign)
 
-# License
