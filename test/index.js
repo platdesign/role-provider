@@ -168,6 +168,18 @@ describe('unit', () => {
 		});
 
 
+		it('should reject with default error if result of validator is true (promise.reject)', () => {
+
+			roles.define('a', () => Promise.reject(true));
+
+			return roles.validateRole('a')
+				.then(() => Promise.reject(new Error('Should not resolve')), (err) => {
+					expect(err).to.be.an.error('Missing permissions for role \'a\'');
+				});
+
+		});
+
+
 
 		it('should reject if result of validator is empty (promise.reject)', () => {
 

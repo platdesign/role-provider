@@ -51,7 +51,7 @@ module.exports = class RoleProvider {
 				}
 				return res;
 			}, (err) => {
-				if (err === false || !err) {
+				if (err === false || !(err instanceof Error)) {
 					return Promise.reject(new Error(`Missing permissions for role '${name}'`));
 				}
 				return Promise.reject(err);
