@@ -113,6 +113,12 @@ Validates given `permissions`-object and returns promise which resolves if all `
 <br><br><br>
 
 
+# Run tests
+
+- One time: `npm test`
+- Watch: `npm run test-watch`
+
+
 # Author
 
 [@platdesign](https://twitter.com/platdesign)
